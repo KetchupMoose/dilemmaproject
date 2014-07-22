@@ -7,6 +7,7 @@
 //
 
 #import "VotePicturesViewController.h"
+#import <Parse/Parse.h>
 
 @interface VotePicturesViewController ()
 
@@ -15,7 +16,7 @@
 @implementation VotePicturesViewController
 
 @synthesize VotePictureSets;
-
+@synthesize PhotoObjects;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,7 +32,33 @@
     // Do any additional setup after loading the view.
     
     //load 4 images
+    [self loadImages];
     
+    for (PFObject *imgObj in PhotoObjects)
+    {
+        PFFile *imgFile = [imgObj objectForKey:@"imageFile"];
+        
+        
+    }
+    
+}
+
+-(void) loadImages
+{
+    //query for data
+    PFQuery * cpqueryr2 = [PFQuery queryWithClassName:@"PhotoSet"];
+    [cpqueryr2 orderByDescending:@"createdAt"];
+    int r2querylimit = 25;
+    NSInteger *query2limitnum = &r2querylimit;
+    cpqueryr2.limit = *query2limitnum ;
+    [cpqueryr2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if  (!error)
+        {
+            PhotoObjects =objects;
+            
+       
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

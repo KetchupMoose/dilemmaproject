@@ -8,6 +8,7 @@
 
 #import "dilemmaViewController.h"
 #import "SetPicturesViewController.h"
+#import "VotePicturesViewController.h"
 
 @interface dilemmaViewController ()
 
@@ -34,6 +35,16 @@
     
     [self addChildViewController:spvc];
     [self.view addSubview:spvc.view];
+    
+}
+
+- (IBAction)VoteOnPhotos:(id)sender {
+    
+   VotePicturesViewController *vpvc;
+    vpvc=[self.storyboard instantiateViewControllerWithIdentifier:@"VotePics"];
+    
+    [self addChildViewController:vpvc];
+    [self.view addSubview:vpvc.view];
     
 }
 

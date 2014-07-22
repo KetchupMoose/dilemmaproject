@@ -26,6 +26,16 @@
                                     <action selector="SetPhotos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aKM-oD-Lws"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-a4-v8i">
+                                <rect key="frame" x="100" y="212" width="121" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vote On Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VoteOnPhotos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Zp-d0-eJT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -37,7 +47,7 @@
         <!--Vote Pictures View Controller-->
         <scene sceneID="xjc-2N-CHY">
             <objects>
-                <viewController id="N1L-Z7-dux" customClass="VotePicturesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VotePics" id="N1L-Z7-dux" customClass="VotePicturesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JI9-LX-Wab"/>
                         <viewControllerLayoutGuide type="bottom" id="Wkq-rX-EaH"/>
@@ -65,6 +75,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView1" destination="PW0-hL-bvE" id="fUY-lO-oCt"/>
+                        <outlet property="imgView2" destination="Ktq-S6-VFW" id="TzV-Fn-SP8"/>
+                        <outlet property="imgView3" destination="Wz8-uf-FjZ" id="emJ-35-CAc"/>
+                        <outlet property="imgView4" destination="QmD-7b-q8q" id="mbx-pb-Lny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTG-cS-tKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

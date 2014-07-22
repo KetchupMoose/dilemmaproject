@@ -10,5 +10,6 @@
 
 @interface dilemmaViewController : UIViewController
 - (IBAction)SetPhotos:(id)sender;
+- (IBAction)VoteOnPhotos:(id)sender;
 
 @end
