@@ -19,6 +19,8 @@
 @implementation SetPicturesViewController
 MBProgressHUD *HUD;
 UIImagePickerController *imagePicker;
+NSInteger numPhotos;
+
 @synthesize capturedImages;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -193,7 +195,6 @@ UIImagePickerController *imagePicker;
         imgObject = [self uploadImage2:image withSmallImage:smallimage];
     }
    
-    
     NSLog(@"Uploaded all 4 images");
 
 }
@@ -392,7 +393,7 @@ UIImagePickerController *imagePicker;
 }
 -(IBAction) flashToggle:(id)sender
 {
-    if (imagePicker.cameraFlashMode == UIImagePickerControllerCameraFlashModeOff)
+    if (imagePicker.cameraFlashMode == UIImagePickerControllerCameraFlashModeOff || imagePicker.cameraFlashMode == UIImagePickerControllerCameraFlashModeAuto)
     {
         imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;
         
@@ -402,6 +403,47 @@ UIImagePickerController *imagePicker;
         imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeOff;
     }
 }
+
+- (IBAction)numPhotosChanged:(id)sender {
+    
+    if(self.numPhotoChanger.selectedSegmentIndex ==0)
+    {
+        //2 photo mode
+        numPhotos = 2;
+        
+        self.imageView3.alpha = 0;
+        self.imageView4.alpha = 0;
+        self.previewImageView3.alpha = 0;
+        self.previewImageView4.alpha = 0;
+        
+        self.previewImageView3.alpha = 0;
+        
+        
+    }
+    if(self.numPhotoChanger.selectedSegmentIndex ==1)
+    {
+        //3 photo mode
+        numPhotos = 3;
+        
+        self.imageView3.alpha = 1;
+         self.imageView4.alpha = 0;
+        self.previewImageView3.alpha = 1;
+        self.previewImageView4.alpha = 0;
+    }
+    if(self.numPhotoChanger.selectedSegmentIndex ==2)
+    {
+        //4 photo mode
+         numPhotos = 4;
+        
+        self.imageView3.alpha = 1;
+        self.imageView4.alpha = 1;
+        self.previewImageView3.alpha = 1;
+        self.previewImageView4.alpha = 1;
+    }
+    
+    
+}
+
 
 
 /*

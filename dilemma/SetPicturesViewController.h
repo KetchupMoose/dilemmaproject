@@ -46,5 +46,6 @@
 -(IBAction) reverseCamera:(id)sender;
 -(IBAction) flashToggle:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *numPhotoChanger;
 
 @end

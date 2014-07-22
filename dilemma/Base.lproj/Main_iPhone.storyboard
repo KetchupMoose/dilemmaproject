@@ -90,6 +90,9 @@
                                     <segment title="3"/>
                                     <segment title="4"/>
                                 </segments>
+                                <connections>
+                                    <action selector="numPhotosChanged:" destination="6ac-Te-UQl" eventType="valueChanged" id="qph-u6-8gR"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-JR-ECc">
                                 <rect key="frame" x="100" y="428" width="120" height="30"/>
@@ -137,6 +140,7 @@
                     <connections>
                         <outlet property="SendPhotosButton" destination="vYL-JR-ECc" id="Oc8-CQ-Fdk"/>
                         <outlet property="imageView" destination="bAV-p5-C9g" id="0h6-17-bPv"/>
+                        <outlet property="numPhotoChanger" destination="QgD-8g-5YU" id="dXT-ez-tWT"/>
                         <outlet property="previewImageView1" destination="9kN-9b-Tev" id="xNY-ks-CfA"/>
                         <outlet property="previewImageView2" destination="DV9-ZK-eDb" id="ObC-P6-Lrf"/>
                         <outlet property="previewImageView3" destination="G1G-vJ-Ztv" id="qSm-bo-Dnf"/>
