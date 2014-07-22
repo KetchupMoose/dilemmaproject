@@ -51,10 +51,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-R5-3cV">
-                    <rect key="frame" x="137" y="400" width="46" height="30"/>
+                    <rect key="frame" x="104" y="400" width="113" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.35126021622600234" blue="0.32279102288601003" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Send">
+                    <state key="normal" title="Confirm Pics">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

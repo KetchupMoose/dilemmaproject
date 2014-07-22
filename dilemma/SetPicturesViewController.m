@@ -128,7 +128,17 @@ NSInteger numPhotos;
     }
     
     
+    if (self.capturedImages.count==numPhotos)
+    {
+        self.TakePicsButton.enabled = false;
+        self.TakePicsButton.backgroundColor = [UIColor grayColor];
+        
+        self.ConfirmPicsButton.enabled = true;
+        self.ConfirmPicsButton.backgroundColor = [UIColor greenColor];
+    }
+    
 }
+
 
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -165,7 +175,13 @@ NSInteger numPhotos;
     HUD.labelText = @"Uploading";
     [HUD show:YES];
     
-    for (int i=0; i<capturedImages.count;i++)
+
+    //create pics set object and add all 4 of the uploaded photos to that pic set
+    NSMutableArray *photosUploaded = [[NSMutableArray alloc] init];
+    
+    
+    
+    for (int i=0; i<numPhotos;i++)
     {
         UIImage *image = [capturedImages objectAtIndex:i];
         int maxw=320;
@@ -180,7 +196,6 @@ NSInteger numPhotos;
         int maxwsmall = 145;
         int maxhsmall = 1000;
         
-        
         CGSize *thesmallsize = [self scalesize:&myimgsize maxWidth:maxwsmall maxHeight:maxhsmall];
         
         UIImage *smallimage = [self imageWithImage:image scaledToSize:*thesmallsize];
@@ -193,10 +208,35 @@ NSInteger numPhotos;
         [contentPhotoACL setPublicWriteAccess:YES];
         imgObject.ACL = contentPhotoACL;
         imgObject = [self uploadImage2:image withSmallImage:smallimage];
+        
+        [photosUploaded addObject:imgObject];
+        
     }
    
+    NSLog(@"create photoSet Object");
+    // Create a PFObject around a PFFile and associate it with the current user
+     PFObject *photoSet = [PFObject objectWithClassName:@"PhotoSet"];
+    
+    PFUser *user = [PFUser currentUser];
+    [photoSet setObject:user forKey:@"creatorPhotoSet"];
+    
+    // Set the access control list to current user for security purposes
+    PFACL *funPhotoACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    [funPhotoACL setPublicReadAccess:YES];
+    [funPhotoACL setPublicWriteAccess:YES];
+    
+    photoSet.ACL = funPhotoACL;
+    
+    [photoSet setObject:@"testCaption" forKey:@"Caption"];
+  
+    [photoSet setObject:photosUploaded forKey:@"Photos"];
+    
+    [photoSet saveInBackground];
+    //need success call here.
+    
     NSLog(@"Uploaded all 4 images");
-
+    
+    //transition to some other screen
 }
 
 #pragma mark imagesizehandlingcode
