@@ -11,7 +11,7 @@
 @interface VotePicturesViewController : UIViewController
 
 @property (nonatomic,strong) NSArray *VotePictureSets;
-@property NSArray *PhotoObjects;
+@property NSArray *PhotoSetObjects;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView2;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView3;

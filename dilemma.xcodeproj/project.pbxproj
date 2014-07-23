@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D3A7AB3B19796D44000CA910 /* smiley.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D3A7AB3A19796D44000CA910 /* smiley.jpeg */; };
 		D3AC8B2D197EE85D001957A3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AC8B2C197EE85D001957A3 /* MBProgressHUD.m */; };
+		D3AC8B3019800F12001957A3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC8B2F19800F12001957A3 /* SDWebImage.framework */; };
+		D3AC8B3419800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AC8B3319800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		FA45CB791943DA80003C15C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB781943DA80003C15C8 /* Foundation.framework */; };
 		FA45CB7B1943DA80003C15C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB7A1943DA80003C15C8 /* CoreGraphics.framework */; };
 		FA45CB7D1943DA80003C15C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB7C1943DA80003C15C8 /* UIKit.framework */; };
@@ -38,6 +40,9 @@
 		D3A7AB3A19796D44000CA910 /* smiley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = smiley.jpeg; path = ../../../Documents/smiley.jpeg; sourceTree = "<group>"; };
 		D3AC8B2B197EE85D001957A3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		D3AC8B2C197EE85D001957A3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D3AC8B2F19800F12001957A3 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = dilemma/SDWebImage.framework; sourceTree = "<group>"; };
+		D3AC8B3219800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
+		D3AC8B3319800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		FA45CB751943DA80003C15C8 /* dilemma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dilemma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA45CB781943DA80003C15C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA45CB7A1943DA80003C15C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AC8B3019800F12001957A3 /* SDWebImage.framework in Frameworks */,
 				FA45CBE21944E748003C15C8 /* SystemConfiguration.framework in Frameworks */,
 				FA45CBE01944E73D003C15C8 /* StoreKit.framework in Frameworks */,
 				FA45CBDE1944E735003C15C8 /* Security.framework in Frameworks */,
@@ -115,6 +121,15 @@
 			name = ProgressIndicator;
 			sourceTree = "<group>";
 		};
+		D3AC8B3119800F19001957A3 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				D3AC8B3219800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */,
+				D3AC8B3319800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */,
+			);
+			name = SDWebImage;
+			sourceTree = "<group>";
+		};
 		FA45CB6C1943DA7F003C15C8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 		FA45CB771943DA80003C15C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3AC8B2F19800F12001957A3 /* SDWebImage.framework */,
 				FA45CBE11944E748003C15C8 /* SystemConfiguration.framework */,
 				FA45CBDF1944E73D003C15C8 /* StoreKit.framework */,
 				FA45CBDD1944E735003C15C8 /* Security.framework */,
@@ -157,6 +173,7 @@
 		FA45CB7E1943DA80003C15C8 /* dilemma */ = {
 			isa = PBXGroup;
 			children = (
+				D3AC8B3119800F19001957A3 /* SDWebImage */,
 				D3AC8B2E197EE865001957A3 /* ProgressIndicator */,
 				D3A7AB3919796D35000CA910 /* assets */,
 				FA45CB871943DA80003C15C8 /* dilemmaAppDelegate.h */,
@@ -285,6 +302,7 @@
 				FA45CBB71943E380003C15C8 /* SetPicturesViewController.m in Sources */,
 				FA45CB851943DA80003C15C8 /* main.m in Sources */,
 				FA45CBB21943DD3A003C15C8 /* VotePicturesViewController.m in Sources */,
+				D3AC8B3419800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

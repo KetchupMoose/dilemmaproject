@@ -8,6 +8,7 @@
 
 #import "VotePicturesViewController.h"
 #import <Parse/Parse.h>
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
 @interface VotePicturesViewController ()
 
@@ -16,7 +17,7 @@
 @implementation VotePicturesViewController
 
 @synthesize VotePictureSets;
-@synthesize PhotoObjects;
+@synthesize PhotoSetObjects;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,28 +35,73 @@
     //load 4 images
     [self loadImages];
     
-    for (PFObject *imgObj in PhotoObjects)
-    {
-        PFFile *imgFile = [imgObj objectForKey:@"imageFile"];
-        
-        
-    }
     
 }
 
 -(void) loadImages
 {
-    //query for data
-    PFQuery * cpqueryr2 = [PFQuery queryWithClassName:@"PhotoSet"];
-    [cpqueryr2 orderByDescending:@"createdAt"];
+    
+    PFQuery *PhotoSetQuery = [PFQuery queryWithClassName:@"PhotoSet"];
+    
+    //you can keep entering more or queries to get more terms
+    [PhotoSetQuery orderByDescending:@"createdAt"];
     int r2querylimit = 25;
     NSInteger *query2limitnum = &r2querylimit;
-    cpqueryr2.limit = *query2limitnum ;
-    [cpqueryr2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    PhotoSetQuery.limit = *query2limitnum;
+    
+    [PhotoSetQuery findObjects];
+    
+    
+    
+    
+     PFQuery *photosQuery = [PFQuery queryWithClassName:@"Photo"];
+    [photosQuery whereKey:@"objectId"
+ 
+   
+    [photosQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if  (!error)
         {
-            PhotoObjects =objects;
+            PhotoSetObjects =  objects;
+            PFObject *firstPhotoSet = [PhotoSetObjects objectAtIndex:0];
+            NSLog(@"loading images");
+            int j = 0;
+            NSArray *photoList = [[NSArray alloc] init];
+            photoList = [firstPhotoSet objectForKey:@"Photos"];
             
+            
+            for (PFObject *photoObj in photoList)
+            {
+                
+                
+                
+                PFFile *imgFile = [photoObj objectForKey:@"imageFile"];
+                //get URL from imgfile
+                NSString *imgurl;
+                
+                j = j+1;
+                
+                imgurl = imgFile.url;
+                UIActivityIndicatorViewStyle activityStyle = UIActivityIndicatorViewStyleGray;
+                
+                if(j==1)
+                {
+                    [self.imgView1 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                }
+                if(j==2)
+                {
+                    [self.imgView2 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                }
+                if(j==3)
+                {
+                    [self.imgView3 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                }
+                if(j==4)
+                {
+                    [self.imgView4 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                }
+                
+            }
+
        
         }
     }];
