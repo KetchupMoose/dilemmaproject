@@ -72,8 +72,6 @@
             for (PFObject *photoObj in photoList)
             {
                 
-                
-                
                 PFFile *imgFile = [photoObj objectForKey:@"imageFile"];
                 
                 //get URL from imgfile
