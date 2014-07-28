@@ -29,7 +29,7 @@
 
 @property (nonatomic,weak) IBOutlet UIButton *ConfirmPicsButton;
 @property (nonatomic,weak) IBOutlet UIButton *TakePicsButton;
-
+@property (nonatomic,weak) IBOutlet UIButton *BackButton;
 
 @property (nonatomic) IBOutlet UIView *overlayView;
 @property (nonatomic) UIImagePickerController *imagePickerController;
@@ -38,6 +38,7 @@
 
 - (IBAction)TakePhoto:(id)sender;
 - (IBAction)ConfirmPhotos:(id)sender;
+- (IBAction)Back:(id)sender;
 
 -(IBAction) UploadPhotos:(id)sender;
 

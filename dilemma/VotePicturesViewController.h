@@ -17,4 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView3;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView4;
 
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
+- (IBAction)Back:(id)sender;
+
 @end

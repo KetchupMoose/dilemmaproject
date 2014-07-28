@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3A7AB3B19796D44000CA910 /* smiley.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D3A7AB3A19796D44000CA910 /* smiley.jpeg */; };
 		D3AC8B2D197EE85D001957A3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AC8B2C197EE85D001957A3 /* MBProgressHUD.m */; };
 		D3AC8B3019800F12001957A3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC8B2F19800F12001957A3 /* SDWebImage.framework */; };
 		D3AC8B3419800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AC8B3319800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		D3AC8B3619817149001957A3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC8B3519817149001957A3 /* ImageIO.framework */; };
-		D3AC8B381981725C001957A3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC8B371981725C001957A3 /* FacebookSDK.framework */; };
 		FA45CB791943DA80003C15C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB781943DA80003C15C8 /* Foundation.framework */; };
 		FA45CB7B1943DA80003C15C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB7A1943DA80003C15C8 /* CoreGraphics.framework */; };
 		FA45CB7D1943DA80003C15C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CB7C1943DA80003C15C8 /* UIKit.framework */; };
@@ -36,17 +34,24 @@
 		FA45CBDE1944E735003C15C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CBDD1944E735003C15C8 /* Security.framework */; };
 		FA45CBE01944E73D003C15C8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CBDF1944E73D003C15C8 /* StoreKit.framework */; };
 		FA45CBE21944E748003C15C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45CBE11944E748003C15C8 /* SystemConfiguration.framework */; };
+		FA7BD7AD19857558006C9A5A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7BD7AC19857558006C9A5A /* FacebookSDK.framework */; };
+		FA7BD7AF198575D8006C9A5A /* smiley.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7AE198575D8006C9A5A /* smiley.jpeg */; };
+		FA7BD7B1198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7B0198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png */; };
+		FA7BD7B619857DB8006C9A5A /* self1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7B219857DB8006C9A5A /* self1.jpeg */; };
+		FA7BD7B719857DB8006C9A5A /* self2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7B319857DB8006C9A5A /* self2.jpeg */; };
+		FA7BD7B819857DB8006C9A5A /* self3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7B419857DB8006C9A5A /* self3.jpeg */; };
+		FA7BD7B919857DB8006C9A5A /* self4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA7BD7B519857DB8006C9A5A /* self4.jpeg */; };
+		FA7BD7BC1985A8F6006C9A5A /* dilemmaTitleScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7BD7BB1985A8F6006C9A5A /* dilemmaTitleScreenViewController.m */; };
+		FA7BD7F91985AAC6006C9A5A /* MyDilemmasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7BD7F81985AAC6006C9A5A /* MyDilemmasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3A7AB3A19796D44000CA910 /* smiley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = smiley.jpeg; path = ../../../Documents/smiley.jpeg; sourceTree = "<group>"; };
 		D3AC8B2B197EE85D001957A3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		D3AC8B2C197EE85D001957A3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		D3AC8B2F19800F12001957A3 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = dilemma/SDWebImage.framework; sourceTree = "<group>"; };
 		D3AC8B3219800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		D3AC8B3319800F30001957A3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		D3AC8B3519817149001957A3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		D3AC8B371981725C001957A3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		FA45CB751943DA80003C15C8 /* dilemma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dilemma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA45CB781943DA80003C15C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA45CB7A1943DA80003C15C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +86,17 @@
 		FA45CBDD1944E735003C15C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA45CBDF1944E73D003C15C8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FA45CBE11944E748003C15C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FA7BD7AC19857558006C9A5A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = dilemma/FacebookSDK.framework; sourceTree = "<group>"; };
+		FA7BD7AE198575D8006C9A5A /* smiley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smiley.jpeg; sourceTree = "<group>"; };
+		FA7BD7B0198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-7-Light-Blue-Gradient.png"; sourceTree = "<group>"; };
+		FA7BD7B219857DB8006C9A5A /* self1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = self1.jpeg; sourceTree = "<group>"; };
+		FA7BD7B319857DB8006C9A5A /* self2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = self2.jpeg; sourceTree = "<group>"; };
+		FA7BD7B419857DB8006C9A5A /* self3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = self3.jpeg; sourceTree = "<group>"; };
+		FA7BD7B519857DB8006C9A5A /* self4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = self4.jpeg; sourceTree = "<group>"; };
+		FA7BD7BA1985A8F6006C9A5A /* dilemmaTitleScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dilemmaTitleScreenViewController.h; sourceTree = "<group>"; };
+		FA7BD7BB1985A8F6006C9A5A /* dilemmaTitleScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dilemmaTitleScreenViewController.m; sourceTree = "<group>"; };
+		FA7BD7F71985AAC6006C9A5A /* MyDilemmasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDilemmasViewController.h; sourceTree = "<group>"; };
+		FA7BD7F81985AAC6006C9A5A /* MyDilemmasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDilemmasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AC8B381981725C001957A3 /* FacebookSDK.framework in Frameworks */,
+				FA7BD7AD19857558006C9A5A /* FacebookSDK.framework in Frameworks */,
 				D3AC8B3619817149001957A3 /* ImageIO.framework in Frameworks */,
 				D3AC8B3019800F12001957A3 /* SDWebImage.framework in Frameworks */,
 				FA45CBE21944E748003C15C8 /* SystemConfiguration.framework in Frameworks */,
@@ -113,7 +129,12 @@
 		D3A7AB3919796D35000CA910 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				D3A7AB3A19796D44000CA910 /* smiley.jpeg */,
+				FA7BD7B219857DB8006C9A5A /* self1.jpeg */,
+				FA7BD7B319857DB8006C9A5A /* self2.jpeg */,
+				FA7BD7B419857DB8006C9A5A /* self3.jpeg */,
+				FA7BD7B519857DB8006C9A5A /* self4.jpeg */,
+				FA7BD7B0198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png */,
+				FA7BD7AE198575D8006C9A5A /* smiley.jpeg */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -157,7 +178,7 @@
 		FA45CB771943DA80003C15C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3AC8B371981725C001957A3 /* FacebookSDK.framework */,
+				FA7BD7AC19857558006C9A5A /* FacebookSDK.framework */,
 				D3AC8B3519817149001957A3 /* ImageIO.framework */,
 				D3AC8B2F19800F12001957A3 /* SDWebImage.framework */,
 				FA45CBE11944E748003C15C8 /* SystemConfiguration.framework */,
@@ -184,6 +205,10 @@
 				D3AC8B3119800F19001957A3 /* SDWebImage */,
 				D3AC8B2E197EE865001957A3 /* ProgressIndicator */,
 				D3A7AB3919796D35000CA910 /* assets */,
+				FA7BD7F71985AAC6006C9A5A /* MyDilemmasViewController.h */,
+				FA7BD7F81985AAC6006C9A5A /* MyDilemmasViewController.m */,
+				FA7BD7BA1985A8F6006C9A5A /* dilemmaTitleScreenViewController.h */,
+				FA7BD7BB1985A8F6006C9A5A /* dilemmaTitleScreenViewController.m */,
 				FA45CB871943DA80003C15C8 /* dilemmaAppDelegate.h */,
 				FA45CB881943DA80003C15C8 /* dilemmaAppDelegate.m */,
 				FA45CB8A1943DA80003C15C8 /* Main_iPhone.storyboard */,
@@ -288,12 +313,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7BD7B1198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png in Resources */,
+				FA7BD7B619857DB8006C9A5A /* self1.jpeg in Resources */,
 				FA45CB8F1943DA80003C15C8 /* Main_iPad.storyboard in Resources */,
 				FA45CBB91944C6AA003C15C8 /* SetPicsOverlay.xib in Resources */,
-				D3A7AB3B19796D44000CA910 /* smiley.jpeg in Resources */,
+				FA7BD7AF198575D8006C9A5A /* smiley.jpeg in Resources */,
 				FA45CB941943DA80003C15C8 /* Images.xcassets in Resources */,
+				FA7BD7B919857DB8006C9A5A /* self4.jpeg in Resources */,
+				FA7BD7B719857DB8006C9A5A /* self2.jpeg in Resources */,
 				FA45CB8C1943DA80003C15C8 /* Main_iPhone.storyboard in Resources */,
 				FA45CB831943DA80003C15C8 /* InfoPlist.strings in Resources */,
+				FA7BD7B819857DB8006C9A5A /* self3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +337,8 @@
 				FA45CB921943DA80003C15C8 /* dilemmaViewController.m in Sources */,
 				D3AC8B2D197EE85D001957A3 /* MBProgressHUD.m in Sources */,
 				FA45CB891943DA80003C15C8 /* dilemmaAppDelegate.m in Sources */,
+				FA7BD7F91985AAC6006C9A5A /* MyDilemmasViewController.m in Sources */,
+				FA7BD7BC1985A8F6006C9A5A /* dilemmaTitleScreenViewController.m in Sources */,
 				FA45CBB71943E380003C15C8 /* SetPicturesViewController.m in Sources */,
 				FA45CB851943DA80003C15C8 /* main.m in Sources */,
 				FA45CBB21943DD3A003C15C8 /* VotePicturesViewController.m in Sources */,
@@ -434,9 +466,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dilemma",
-					"/Users/brian/Downloads/PSIndyProject-master",
-					"/Users/brian/Downloads/PSIndyProject-master/petGallery/Pinterest.embeddedframework",
-					/Users/brian/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dilemma/dilemma-Prefix.pch";
@@ -459,9 +488,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dilemma",
-					"/Users/brian/Downloads/PSIndyProject-master",
-					"/Users/brian/Downloads/PSIndyProject-master/petGallery/Pinterest.embeddedframework",
-					/Users/brian/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dilemma/dilemma-Prefix.pch";

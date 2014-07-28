@@ -151,4 +151,13 @@
 }
 */
 
+- (IBAction)Back:(id)sender
+{
+    
+    NSLog(@"back got touched");
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 @end
