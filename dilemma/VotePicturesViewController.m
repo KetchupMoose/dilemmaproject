@@ -8,7 +8,9 @@
 
 #import "VotePicturesViewController.h"
 #import <Parse/Parse.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface VotePicturesViewController ()
 
@@ -52,7 +54,7 @@
     [PhotoSetQuery includeKey:@"Photos"];
     
     
-    [PhotoSetQuery findObjects];
+    //[PhotoSetQuery findObjects];
     
  
    
@@ -84,7 +86,9 @@
                 
                 if(j==1)
                 {
-                      [self.imgView1 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                      //[self.imgView1 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                    [self.imgView1 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:activityStyle];
+                    
                     UILabel *voteScore = [[UILabel alloc] init];
                     NSNumber *votenum = [voteList objectAtIndex:0];
                     voteScore.text = [votenum stringValue];
@@ -96,35 +100,35 @@
                 }
                 if(j==2)
                 {
-                    [self.imgView2 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                   [self.imgView2 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:activityStyle];
                     UILabel *voteScore = [[UILabel alloc] init];
                     NSNumber *votenum = [voteList objectAtIndex:1];
                     voteScore.text = [votenum stringValue];
                     voteScore.textColor = [UIColor whiteColor];
                     voteScore.frame = self.imgView1.bounds;
-                    [self.imgView1 addSubview:voteScore];
+                    [self.imgView2 addSubview:voteScore];
                     
                     
                 }
                 if(j==3)
                 {
-                    [self.imgView3 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                    [self.imgView3 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:activityStyle];
                     UILabel *voteScore = [[UILabel alloc] init];
                     NSNumber *votenum = [voteList objectAtIndex:2];
                     voteScore.text = [votenum stringValue];
                     voteScore.textColor = [UIColor whiteColor];
                     voteScore.frame = self.imgView1.bounds;
-                    [self.imgView1 addSubview:voteScore];
+                    [self.imgView3 addSubview:voteScore];
                 }
                 if(j==4)
                 {
-                    [self.imgView4 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:(UIActivityIndicatorViewStyle)activityStyle ];
+                    [self.imgView4 setImageWithURL:[NSURL URLWithString:imgurl] usingActivityIndicatorStyle:activityStyle];
                     UILabel *voteScore = [[UILabel alloc] init];
                     NSNumber *votenum = [voteList objectAtIndex:3];
                     voteScore.text = [votenum stringValue];
                     voteScore.textColor = [UIColor whiteColor];
                     voteScore.frame = self.imgView1.bounds;
-                    [self.imgView1 addSubview:voteScore];
+                    [self.imgView4 addSubview:voteScore];
                 }
                 
             }

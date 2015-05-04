@@ -17,8 +17,19 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView3;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView4;
 
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 
-- (IBAction)Back:(id)sender;
+- (IBAction)Menu:(id)sender;
+
+@property (weak,nonatomic) IBOutlet UILabel *styleScore;
+@property (weak,nonatomic) IBOutlet UILabel *karmaScore;
+
+-(IBAction)sendComment:(id)sender;
+-(IBAction)createDilemma:(id)sender;
+
+@property (weak,nonatomic) IBOutlet UILabel *dilemmaQuote;
+
+@property (nonatomic, strong) NSString *dilemmaCategory;
+
 
 @end
