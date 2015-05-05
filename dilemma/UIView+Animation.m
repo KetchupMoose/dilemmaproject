@@ -377,7 +377,34 @@
 
 }
 
+-(void) GrowAndShrinkView:(UIView *) view WithRatio:(float)ratio;
 
+{
+    CGRect origframe = view.frame;
+    //origframe.origin = newpoint;
+    
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        view.frame = origframe;
+        view.transform = CGAffineTransformScale(CGAffineTransformIdentity, ratio, ratio);
+    }
+                     completion:^(BOOL finished)
+     {
+         [self ShrinkView:view WithRatio:ratio];
+     }];
+    
+    
+}
+
+-(void)ShrinkView:(UIView *)view WithRatio:(float)ratio;
+{
+    CGRect origframe = view.frame;
+    //return to original ratio
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        view.frame = origframe;
+        view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1/ratio, 1/ratio);
+    }
+                     completion:nil];
+}
 
 -(void) BounceAddTheView:(UIView *) view
 {

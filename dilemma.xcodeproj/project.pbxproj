@@ -43,6 +43,10 @@
 		EC61F6F41AF72158006DA8B3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61F6E21AF72158006DA8B3 /* UIImageView+HighlightedWebCache.m */; };
 		EC61F6F51AF72158006DA8B3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61F6E41AF72158006DA8B3 /* UIImageView+WebCache.m */; };
 		EC61F6F61AF72158006DA8B3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61F6E61AF72158006DA8B3 /* UIView+WebCacheOperation.m */; };
+		EC641DFD1AF843490005073C /* dilemmaUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC641DFC1AF843490005073C /* dilemmaUIImageView.m */; };
+		EC641DFF1AF843C50005073C /* heartsymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EC641DFE1AF843C40005073C /* heartsymbol.png */; };
+		EC641E011AF84BFF0005073C /* check_mark_green.png in Resources */ = {isa = PBXBuildFile; fileRef = EC641E001AF84BFF0005073C /* check_mark_green.png */; };
+		EC641E031AF964980005073C /* hearticon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC641E021AF964980005073C /* hearticon.png */; };
 		ECE1A3C71A97ACF3003DAB06 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1A3C41A97ACF3003DAB06 /* Bolts.framework */; };
 		ECE1A3C81A97ACF3003DAB06 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1A3C51A97ACF3003DAB06 /* Parse.framework */; };
 		ECE1A3FD1A97AE3B003DAB06 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1A3FC1A97AE3B003DAB06 /* Social.framework */; };
@@ -143,6 +147,11 @@
 		EC61F6E41AF72158006DA8B3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		EC61F6E51AF72158006DA8B3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		EC61F6E61AF72158006DA8B3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		EC641DFB1AF843490005073C /* dilemmaUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dilemmaUIImageView.h; sourceTree = "<group>"; };
+		EC641DFC1AF843490005073C /* dilemmaUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dilemmaUIImageView.m; sourceTree = "<group>"; };
+		EC641DFE1AF843C40005073C /* heartsymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartsymbol.png; sourceTree = "<group>"; };
+		EC641E001AF84BFF0005073C /* check_mark_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_mark_green.png; sourceTree = "<group>"; };
+		EC641E021AF964980005073C /* hearticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearticon.png; sourceTree = "<group>"; };
 		ECE1A3C41A97ACF3003DAB06 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = dilemma/Bolts.framework; sourceTree = "<group>"; };
 		ECE1A3C51A97ACF3003DAB06 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = dilemma/Parse.framework; sourceTree = "<group>"; };
 		ECE1A3FC1A97AE3B003DAB06 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -227,6 +236,9 @@
 		D3A7AB3919796D35000CA910 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				EC641E021AF964980005073C /* hearticon.png */,
+				EC641E001AF84BFF0005073C /* check_mark_green.png */,
+				EC641DFE1AF843C40005073C /* heartsymbol.png */,
 				EC61F6AE1AF679DD006DA8B3 /* SponsorIcon.png */,
 				EC61F6A81AF677B4006DA8B3 /* Clipart-Of-A-Young-Blond-Woman-Avatar-With-Sunglasses-Royalty-Free-Vector-Illustration-10241228123.jpg */,
 				EC61F6A91AF677B4006DA8B3 /* sunglasswoman.jpg */,
@@ -382,6 +394,8 @@
 				FA45CBB81944C6AA003C15C8 /* SetPicsOverlay.xib */,
 				FA45CBB01943DD3A003C15C8 /* VotePicturesViewController.h */,
 				FA45CBB11943DD3A003C15C8 /* VotePicturesViewController.m */,
+				EC641DFB1AF843490005073C /* dilemmaUIImageView.h */,
+				EC641DFC1AF843490005073C /* dilemmaUIImageView.m */,
 				FA45CB8D1943DA80003C15C8 /* Main_iPad.storyboard */,
 				FA45CB901943DA80003C15C8 /* dilemmaViewController.h */,
 				FA45CB911943DA80003C15C8 /* dilemmaViewController.m */,
@@ -481,7 +495,9 @@
 				FA7BD7B1198578C5006C9A5A /* iOS-7-Light-Blue-Gradient.png in Resources */,
 				EC2BF8D41AADB0F200DD87DB /* carselfie1.jpg in Resources */,
 				EC61F69F1AF57470006DA8B3 /* male-female-profile-picture-vector-abstract-32171668.jpg in Resources */,
+				EC641E031AF964980005073C /* hearticon.png in Resources */,
 				FA7BD7B619857DB8006C9A5A /* self1.jpeg in Resources */,
+				EC641DFF1AF843C50005073C /* heartsymbol.png in Resources */,
 				FA45CB8F1943DA80003C15C8 /* Main_iPad.storyboard in Resources */,
 				FA45CBB91944C6AA003C15C8 /* SetPicsOverlay.xib in Resources */,
 				FA7BD7AF198575D8006C9A5A /* smiley.jpeg in Resources */,
@@ -500,6 +516,7 @@
 				FA45CB831943DA80003C15C8 /* InfoPlist.strings in Resources */,
 				FA7BD7B819857DB8006C9A5A /* self3.jpeg in Resources */,
 				EC61F6A31AF57617006DA8B3 /* sexappeal.jpg in Resources */,
+				EC641E011AF84BFF0005073C /* check_mark_green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +531,7 @@
 				EC61F6EE1AF72158006DA8B3 /* SDWebImageManager.m in Sources */,
 				EC61F6F51AF72158006DA8B3 /* UIImageView+WebCache.m in Sources */,
 				EC61F6ED1AF72158006DA8B3 /* SDWebImageDownloaderOperation.m in Sources */,
+				EC641DFD1AF843490005073C /* dilemmaUIImageView.m in Sources */,
 				FA45CB921943DA80003C15C8 /* dilemmaViewController.m in Sources */,
 				EC61F6E91AF72158006DA8B3 /* SDImageCache.m in Sources */,
 				EC61F6E71AF72158006DA8B3 /* MKAnnotationView+WebCache.m in Sources */,
@@ -673,7 +691,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "43B9A007-EB1B-44B8-8FA4-FC27863C0978";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -696,7 +714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "43B9A007-EB1B-44B8-8FA4-FC27863C0978";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

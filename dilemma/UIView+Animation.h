@@ -35,6 +35,7 @@
 -(void) SpinAView:(UIView *) view;
 -(void) SpinThenAdd:(UIView *) view withHeartView:(UIView *) heartView;
 -(void) GrowAView:(UIView *) view WithNewOrigin:(CGPoint ) newpoint;
+-(void) GrowAndShrinkView:(UIView *) view WithRatio:(float)ratio;
 -(void)fadeAView:(UIView *) view WithNewImage:(UIImage *) newImage;
 -(void) SlideOffRight:(UIView *) view duration:(float) secs;
 

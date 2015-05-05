@@ -20,6 +20,10 @@
 
 @synthesize VotePictureSets;
 @synthesize PhotoSetObjects;
+@synthesize heartSymbol;
+PFObject *activePhotoSet;
+CGPoint *lastLocation;
+UIImageView *checkMark;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,9 +38,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    /*
+    self.imgView1.userInteractionEnabled = YES;
+    self.imgView2.userInteractionEnabled = YES;
+    self.imgView3.userInteractionEnabled = YES;
+    self.imgView4.userInteractionEnabled = YES;
+    */
+    
+    //add checkmark image inside heartsymbol
+    checkMark = [[UIImageView alloc] initWithFrame:CGRectMake(heartSymbol.frame.size.width/2-10,heartSymbol.frame.size.height/2-10,20,20)];
+    checkMark.image = [UIImage imageNamed:@"check_mark_green.png"];
+    checkMark.alpha = 0;
+    
+    //checkMark.center = heartSymbol.center;
+    [heartSymbol addSubview:checkMark];
+    heartSymbol.checkmarkImg = checkMark;
+    
+    
+    heartSymbol.userInteractionEnabled = YES;
+    heartSymbol.alpha = 0.4;
+    heartSymbol.delegate = self;
+    
+ 
     //load 4 images
     [self loadImages];
-    
     
 }
 
@@ -53,22 +78,19 @@
    
     [PhotoSetQuery includeKey:@"Photos"];
     
-    
     //[PhotoSetQuery findObjects];
-    
- 
    
     [PhotoSetQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if  (!error)
         {
             PhotoSetObjects =  objects;
-            PFObject *firstPhotoSet = [PhotoSetObjects objectAtIndex:0];
+            activePhotoSet = [PhotoSetObjects objectAtIndex:0];
             NSLog(@"loading images");
             int j = 0;
             NSArray *photoList = [[NSArray alloc] init];
-            photoList = [firstPhotoSet objectForKey:@"Photos"];
+            photoList = [activePhotoSet objectForKey:@"Photos"];
             NSArray *voteList = [[NSArray alloc] init];
-            voteList = [firstPhotoSet objectForKey:@"PhotoVotes"];
+            voteList = [activePhotoSet objectForKey:@"PhotoVotes"];
             
             
             for (PFObject *photoObj in photoList)
@@ -133,9 +155,52 @@
                 
             }
 
-       
+       [self setHeartSymbolCoordinates];
         }
     }];
+    
+    
+    
+}
+
+-(void)setHeartSymbolCoordinates
+{
+    //sets the coordinates for img1,2, 3, and 4's center points
+    NSMutableArray *imgCoordinates = [[NSMutableArray alloc] init];
+    NSArray *photoList = [activePhotoSet objectForKey:@"Photos"];
+    NSInteger photoCount = [photoList count];
+    
+    if(photoCount ==2)
+    {
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView1.center]];
+       [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView2.center]];
+        
+    }
+    
+    if(photoCount ==3)
+    {
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView1.center]];
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView2.center]];
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView3.center]];
+    }
+    
+    if(photoCount ==4)
+    {
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView1.center]];
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView2.center]];
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView3.center]];
+        [imgCoordinates addObject:[NSValue valueWithCGPoint:self.imgView4.center]];
+    }
+    
+    self.heartSymbol.pointCoordinates = [imgCoordinates copy];
+}
+
+#pragma mark dilemmaUIImageViewDelegate Methods
+- (void)selectImgView:(NSInteger) index
+{
+    NSLog(@"selected this image!");
+    NSLog(@"%ld",index);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,5 +228,6 @@
     [self.navigationController popViewControllerAnimated:YES];
     
 }
+
 
 @end

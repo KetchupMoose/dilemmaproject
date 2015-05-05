@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "dilemmaUIImageView.h"
 
-@interface VotePicturesViewController : UIViewController
+@interface VotePicturesViewController : UIViewController <dilemmaUIImageViewDelegate>
 
 @property (nonatomic,strong) NSArray *VotePictureSets;
 @property NSArray *PhotoSetObjects;
@@ -16,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView2;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView3;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView4;
+@property (weak,nonatomic) IBOutlet dilemmaUIImageView *heartSymbol;
+
+
 
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 

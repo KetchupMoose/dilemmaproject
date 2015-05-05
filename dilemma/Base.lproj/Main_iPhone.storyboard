@@ -347,12 +347,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hearticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="xaB-8f-CWE" customClass="dilemmaUIImageView">
+                                <rect key="frame" x="119" y="170" width="82" height="73"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="dilemmaQuote" destination="dm4-Os-w9R" id="uLJ-t0-Zfb"/>
+                        <outlet property="heartSymbol" destination="xaB-8f-CWE" id="Wkw-tk-NNW"/>
                         <outlet property="imgView1" destination="PW0-hL-bvE" id="fUY-lO-oCt"/>
                         <outlet property="imgView2" destination="Ktq-S6-VFW" id="TzV-Fn-SP8"/>
                         <outlet property="imgView3" destination="Wz8-uf-FjZ" id="emJ-35-CAc"/>
@@ -469,6 +473,7 @@
     <resources>
         <image name="SponsorIcon.png" width="308" height="308"/>
         <image name="carselfie1.jpg" width="500" height="666"/>
+        <image name="hearticon.png" width="256" height="256"/>
         <image name="smiley.jpeg" width="227" height="222"/>
         <image name="sun_glasses-512.png" width="512" height="512"/>
         <image name="womanatmirror.jpg" width="300" height="450"/>
